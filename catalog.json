@@ -30,7 +30,7 @@
     { "id": "prod-8ffd11a8-024", "name": "Basic Item 24", "category": "electronics", "price": 369.29, "stock": 136, "rating": 4.8 }
   ],
   "aggregations": {
-    "sports": { "count": 5, "inventoryValue": 195595.23 },
+    "sports": { "count": 5, "inventoryValue": 217645.93000000002 },
     "clothing": { "count": 7, "inventoryValue": 156497.27000000002 },
     "books": { "count": 7, "inventoryValue": 239244.7 },
     "electronics": { "count": 5, "inventoryValue": 90848.83 },
