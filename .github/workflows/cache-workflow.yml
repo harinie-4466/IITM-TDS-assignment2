@@ -1,0 +1,29 @@
+name: Cache CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  cache-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Cache dependencies
+        id: cache-step
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: cache-ddc8881
+
+      - name: prime-cache-ddc8881
+        run: echo "Cache hit? ${{ steps.cache-step.outputs.cache-hit }}"
